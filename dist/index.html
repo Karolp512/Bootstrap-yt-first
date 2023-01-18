@@ -43,7 +43,11 @@
             <span class="text-warning"> Web Developer</span>
           </h1>
           <p class="lead my-4">We focus on teaching our students the fundamentals of the latest and greatest technogies to prepare them for their first dev role</p>
-          <button type="button" class="btn btn-primary btn-lg">Start The Enrollment</button>
+          <button 
+            type="button" 
+            class="btn btn-primary btn-lg"
+            data-bs-toggle="modal"
+            data-bs-target="#myModal">Start The Enrollment</button>
         </div>
         <img class="img-fluid w-50 d-none d-md-block" src="../dist/images/webdev/webdev.png">
       </div>
@@ -372,6 +376,71 @@
         </div>
       </div>
     </section>
+
+    <!-- FOOTER -->
+    <footer class="p-5 bg-dark text-center text-white-50 position-relative">
+      <div class="container">
+          <p class="lead m-0">Copyright &copy; 2021 FronteEnd Bootstrap</p>
+          <a href="#" class="position-absolute p-5 bottom-0 end-0">
+            <i class="bi bi-arrow-up-circle h2 text-light"></i>
+          </a> 
+      </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Enrollment</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p class="lead">Fill out this form and we will get back to you</p>
+            <form>
+              <label for="name" class="col-form-label">First Name:</label>
+              <input 
+                type="text" 
+                class="form-control mb-3" 
+                id="name" 
+                placeholder="Enter Your First Name"
+                required
+              />
+              <label for="last-name" class="col-form-label">Last Name:</label>
+              <input 
+                type="text" 
+                class="form-control mb-3"
+                id="last-name" 
+                placeholder="Enter Your Last Name"
+                required
+              />
+              <label for="email" class="col-form-label">Email:</label>
+              <input 
+                type="email" 
+                class="form-control mb-3" 
+                id="email" 
+                placeholder="Enter Your Email Address"
+                required
+              />
+              <label for="phone" class="col-form-label">First name:</label>
+              <input 
+                type="tel"
+                class="form-control mb-3"
+                id="phone"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                placeholder="Format 222-222-2222"
+                required
+              />
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Enroll</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 </body>
